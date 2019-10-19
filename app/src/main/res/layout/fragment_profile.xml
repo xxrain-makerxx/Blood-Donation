@@ -6,55 +6,49 @@
   android:layout_height="match_parent">
 
 
-  <TextView
-      android:id="@+id/textViewCity"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
-      android:text="TextView"
-      android:textSize="16sp"
-      android:textColor="#000000"
-      app:layout_constraintEnd_toEndOf="@+id/textViewBloodType"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/textViewBloodType"
-      app:layout_constraintTop_toBottomOf="@+id/textViewBloodType" />
+    <TextView
+        android:id="@+id/textViewCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewBloodType"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBloodType" />
 
-  <TextView
-      android:id="@+id/textViewName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="TextView"
-      android:textSize="16sp"
-      android:textColor="#000000"
-      app:layout_constraintBottom_toBottomOf="@+id/text_view_name_head"
-      app:layout_constraintEnd_toEndOf="@+id/textViewBloodType"
-      app:layout_constraintStart_toStartOf="@+id/textViewBloodType"
-      app:layout_constraintTop_toTopOf="@+id/text_view_name_head" />
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_name_head"
+        app:layout_constraintStart_toStartOf="@+id/textViewBloodType"
+        app:layout_constraintTop_toTopOf="@+id/text_view_name_head" />
 
-  <TextView
-      android:id="@+id/textViewEmail"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
-      android:text="TextView"
-      android:textSize="16sp"
-      android:textColor="#000000"
-      app:layout_constraintEnd_toEndOf="@+id/textViewBloodType"
-      app:layout_constraintStart_toStartOf="@+id/textViewBloodType"
-      app:layout_constraintTop_toBottomOf="@+id/textViewName"
-      tools:layout_editor_absoluteX="205dp" />
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewBloodType"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
-  <TextView
-      android:id="@+id/textViewAge"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
-      android:text="TextView"
-      android:textSize="16sp"
-      android:textColor="#000000"
-      app:layout_constraintEnd_toEndOf="@+id/textViewBloodType"
-      app:layout_constraintStart_toStartOf="@+id/textViewBloodType"
-      app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+    <TextView
+        android:id="@+id/textViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewBloodType"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
 
   <TextView
       android:id="@+id/textViewBloodType"
@@ -157,15 +151,15 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
-  <TextView
-      android:id="@+id/textViewPhone"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
-      android:text="TextView"
-      android:textSize="16sp"
-      android:textColor="#000000"
-      app:layout_constraintEnd_toEndOf="@+id/textViewBloodType"
-      app:layout_constraintStart_toStartOf="@+id/textViewBloodType"
-      app:layout_constraintTop_toBottomOf="@+id/textViewAge" />
+    <TextView
+        android:id="@+id/textViewPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewBloodType"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAge" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

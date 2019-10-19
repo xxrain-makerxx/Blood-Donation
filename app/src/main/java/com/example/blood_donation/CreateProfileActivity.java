@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Objects;
+
 public class CreateProfileActivity extends AppCompatActivity {
     FirebaseFirestore firebaseFirestore;
     EditText name,age,phone,city,blood;
@@ -39,7 +41,7 @@ public class CreateProfileActivity extends AppCompatActivity {
             model.setUid(FirebaseAuth.getInstance().getUid());
             model.setBlood(blood.getText().toString());
             model.setEmail(FirebaseAuth.getInstance().getCurrentUser().getEmail());
-            firebaseFirestore.collection("Users").document().set(model);
+            firebaseFirestore.collection("Users").document(Objects.requireNonNull(FirebaseAuth.getInstance().getUid())).set(model);
             Toast.makeText(this,"Saved",Toast.LENGTH_LONG).show();
             startActivity(new Intent(this,MainActivity.class));
             finish();
