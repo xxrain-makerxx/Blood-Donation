@@ -10,5 +10,6 @@ public class ProfileModel {
     String blood;
     String phone;
     String uid;
+    String email;
 
 }

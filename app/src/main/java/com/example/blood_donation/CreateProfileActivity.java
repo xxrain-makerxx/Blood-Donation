@@ -38,6 +38,7 @@ public class CreateProfileActivity extends AppCompatActivity {
             model.setPhone(phone.getText().toString());
             model.setUid(FirebaseAuth.getInstance().getUid());
             model.setBlood(blood.getText().toString());
+            model.setEmail(FirebaseAuth.getInstance().getCurrentUser().getEmail());
             firebaseFirestore.collection("Users").document().set(model);
             Toast.makeText(this,"Saved",Toast.LENGTH_LONG).show();
             startActivity(new Intent(this,MainActivity.class));
