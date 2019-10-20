@@ -6,25 +6,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.blood_donation.CreateRequestActivity;
-import com.example.blood_donation.MainActivity;
+import com.example.blood_donation.ui.Requests.CreateRequestActivity;
 import com.example.blood_donation.R;
-import com.example.blood_donation.RequestsActivity;
+import com.example.blood_donation.ui.Requests.RequestsActivity;
 import com.example.blood_donation.SearchActivity;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     Button buttonRequests, buttonSearch , buttonCreateRquest;
-
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

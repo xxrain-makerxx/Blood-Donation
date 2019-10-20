@@ -42,6 +42,7 @@ public class SignUpActivity extends AppCompatActivity {
 
 
         buttonSignUp.setOnClickListener(v -> {
+
             email=tvEmail.getText().toString().trim();
             password=tvPassword.getText().toString();
             if(!email.isEmpty() && !password.isEmpty())
@@ -49,7 +50,7 @@ public class SignUpActivity extends AppCompatActivity {
                 mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
 
-                        saveUser(mAuth.getCurrentUser());
+                        startMain(mAuth.getCurrentUser());
                     } else {
                         Toast.makeText(getApplicationContext(), "Error:"+task.getException(), Toast.LENGTH_LONG).show();
                     }
@@ -61,17 +62,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-    private void saveUser(FirebaseUser user) {
-        SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
-        editor.putString("Name","Name").apply();
-        if(user.getUid().equals(ADMIN_ID))
-            editor.putBoolean("Access",true).apply();
-        else
-            editor.putBoolean("Access",false).apply();
 
-        startMain(user);
-
-    }
 
     @Override
     public void onBackPressed() {

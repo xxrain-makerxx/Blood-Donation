@@ -1,7 +1,9 @@
 package com.example.blood_donation;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -43,6 +45,8 @@ public class CreateProfileActivity extends AppCompatActivity {
             Toast.makeText(this,"Saved",Toast.LENGTH_LONG).show();
             startActivity(new Intent(this,MainActivity.class));
             finish();
+            SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
+            editor.putString("City",city.getText().toString()).apply();
         });
 
     }
