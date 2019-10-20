@@ -11,7 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
+<<<<<<< HEAD
 import com.example.blood_donation.ui.Requests.CreateRequestActivity;
+=======
+import com.example.blood_donation.CreateRequestActivity;
+>>>>>>> 9b8ab3a38474435617d367bff67cb46ec9af75a9
 import com.example.blood_donation.R;
 import com.example.blood_donation.ui.Requests.RequestsActivity;
 import com.example.blood_donation.SearchActivity;
@@ -27,7 +31,7 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        buttonSearch = root.findViewById(R.id.button_Search);
+        buttonSearch = root.findViewById(R.id.button_search);
         buttonRequests = root.findViewById(R.id.button_requests);
         buttonCreateRquest = root.findViewById(R.id.button_create_request);
 
