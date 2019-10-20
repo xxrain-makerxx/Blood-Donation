@@ -11,14 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
-<<<<<<< HEAD
-import com.example.blood_donation.ui.Requests.CreateRequestActivity;
-=======
-import com.example.blood_donation.CreateRequestActivity;
->>>>>>> 9b8ab3a38474435617d367bff67cb46ec9af75a9
 import com.example.blood_donation.R;
-import com.example.blood_donation.ui.Requests.RequestsActivity;
 import com.example.blood_donation.SearchActivity;
+import com.example.blood_donation.ui.Requests.CreateRequestActivity;
+import com.example.blood_donation.ui.Requests.RequestsActivity;
 
 public class HomeFragment extends Fragment {
 
