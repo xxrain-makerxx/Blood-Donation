@@ -39,7 +39,7 @@ public class RequestsActivity extends AppCompatActivity {
                 {
                     modelList=task.getResult().toObjects(RequestsModel.class);
                     for(RequestsModel i:modelList){
-                        if(i.getCity()==city)
+                        if(i.getCity().equals(city))
                             newList.add(i);
                     }
                     adapter.setData(newList);

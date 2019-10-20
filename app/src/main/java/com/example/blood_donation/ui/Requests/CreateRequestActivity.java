@@ -25,7 +25,7 @@ public class CreateRequestActivity extends AppCompatActivity {
         place=findViewById(R.id.req_place);
         blood=findViewById(R.id.req_blood);
         message=findViewById(R.id.req_message);
-        phone=findViewById(R.id.req_message);
+        phone=findViewById(R.id.req_phone);
         RequestsModel model=new RequestsModel();
         save.setOnClickListener(v->{
             model.setBlood(blood.getText().toString());
