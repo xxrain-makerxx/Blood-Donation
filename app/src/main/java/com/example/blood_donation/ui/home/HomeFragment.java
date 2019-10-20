@@ -6,20 +6,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.blood_donation.ui.Requests.CreateRequestActivity;
+import com.example.blood_donation.MainActivity;
 import com.example.blood_donation.R;
-import com.example.blood_donation.ui.Requests.RequestsActivity;
 import com.example.blood_donation.SearchActivity;
+import com.example.blood_donation.ui.Requests.CreateRequestActivity;
+import com.example.blood_donation.ui.Requests.RequestsActivity;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     Button buttonRequests, buttonSearch , buttonCreateRquest;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -27,7 +32,7 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        buttonSearch = root.findViewById(R.id.button_Search);
+        buttonSearch = root.findViewById(R.id.button_search);
         buttonRequests = root.findViewById(R.id.button_requests);
         buttonCreateRquest = root.findViewById(R.id.button_create_request);
 
@@ -42,6 +47,8 @@ public class HomeFragment extends Fragment {
         buttonCreateRquest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 Intent i = new Intent(getContext(), CreateRequestActivity.class);
                 startActivity(i);
             }
