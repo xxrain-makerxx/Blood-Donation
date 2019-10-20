@@ -17,17 +17,19 @@ import com.example.blood_donation.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Objects;
 
 public class ProfileFragment extends Fragment {
 
     private ProfileViewModel profileViewModel;
     TextView textViewName,textViewEmail,textViewAge
             ,textViewPhone,textViewBloodType,textViewCity;
-    String Uid;
-    FirebaseAuth mAuth;
+    FirebaseUser user;
     FirebaseFirestore database;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -40,14 +42,14 @@ public class ProfileFragment extends Fragment {
         textViewPhone = root.findViewById(R.id.textViewPhone);
         textViewBloodType = root.findViewById(R.id.textViewBloodType);
         textViewCity = root.findViewById(R.id.textViewCity);
-        mAuth = FirebaseAuth.getInstance();
+        user = FirebaseAuth.getInstance().getCurrentUser();
         database = FirebaseFirestore.getInstance();
         setValues();
         return root;
     }
 
     public void setValues(){
-        Uid = mAuth.getCurrentUser().getUid();
+        String Uid = user.getUid();
         DocumentReference dbRef = database.collection("Users").document(Uid);
         dbRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
